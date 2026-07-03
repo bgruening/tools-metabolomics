@@ -1,5 +1,10 @@
 <tool id="Heatmap" name="Heatmap" version="2.2.2+galaxy1" profile="21.09">
   <description>Heatmap of the dataMatrix</description>
+  <creator>
+    <person givenName="Etienne" familyName="Thevenot" />
+    <organization name="CEA, LIST, MetaboHUB Paris" />
+    <organization name="Workflow4Metabolomics" url="https://workflow4metabolomics.org/" />
+  </creator>  
   <requirements>
     <requirement type="package" version="1.1_5">r-batch</requirement>
   </requirements>
@@ -152,11 +157,6 @@
     </test>
   </tests>
   <help>
-
-
-.. class:: infomark
-
-**Author** Etienne Thevenot (W4M Core Development Team, MetaboHUB Paris, CEA)
 
 
 ========================
