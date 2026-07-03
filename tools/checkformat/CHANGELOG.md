@@ -3,7 +3,7 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-## [3.0.0+galaxy0] - 2025-07-16
+## [4.0.0+galaxy0] - 2025-07-16
 ### Changed
 - migrated from Gitlab to GitHub
 
