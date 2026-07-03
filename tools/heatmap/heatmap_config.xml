@@ -1,4 +1,4 @@
-<tool id="Heatmap" name="Heatmap" version="3.0.0+galaxy0" profile="21.09">
+<tool id="Heatmap" name="Heatmap" version="2.2.2+galaxy1" profile="21.09">
   <description>Heatmap of the dataMatrix</description>
   <requirements>
     <requirement type="package" version="1.1_5">r-batch</requirement>
@@ -153,35 +153,11 @@
   </tests>
   <help>
 
-.. class:: infomark
-    
-| **Tool update: See the 'NEWS' section at the bottom of the page**
-
 ---------------------------------------------------
 
 .. class:: infomark
 
 **Author** Etienne Thevenot (W4M Core Development Team, MetaboHUB Paris, CEA)
-
----------------------------------------------------
-
-.. class:: infomark
-
-**References**
-
-| Etienne A. Thevenot, Aurelie Roux, Ying Xu, Eric Ezan, and Christophe Junot (2015). Analysis of the human adult urinary metabolome variations with age, body mass index and gender by implementing a comprehensive workflow for univariate and OPLS statistical analyses. *Journal of Proteome Research*, **14**:3322-3335 (http://dx.doi.org/10.1021/acs.jproteome.5b00354).
-| R Core Team (2013). R: A language and environment for statistical computing. R Foundation for Statistical Computing, Vienna, Austria (http://www.r-project.org)
-|
-
----------------------------------------------------
-
-.. class:: infomark
-
-**Tool updates**
-
-See the **NEWS** section at the bottom of this page
-  
----------------------------------------------------
 
 
 ========================
@@ -280,19 +256,10 @@ information.txt
 	
 ---------------------------------------------------
 
----------------
-Working example
----------------
-
-.. class:: infomark
-
-See the **W4M00001a_sacurine-subset-statistics** shared history in the **Shared Data/Published Histories** menu (https://workflow4metabolomics.usegalaxy.fr/histories/list_published)
-
----------------------------------------------------
-
 ----
 NEWS
 ----
+
 
 CHANGES IN VERSION 2.2.2
 ========================
@@ -337,19 +304,7 @@ Internal replacement of the as.hclust function which happened to produce error m
    year = {2016},
    url = {https://www.R-project.org/},
    }</citation>
-    <citation type="bibtex">@Article{Thevenot2015,
-   Title                    = {Analysis of the human adult urinary metabolome variations with age, body mass index and gender by implementing a comprehensive workflow for univariate and OPLS statistical analyses},
-   Author                   = {Thevenot, Etienne A. and Roux, Aurelie and Xu, Ying and Ezan, Eric and Junot, Christophe},
-   Journal                  = {Journal of Proteome Research},
-   Year                     = {2015},
-   Note                     = {PMID: 26088811},
-   Number                   = {8},
-   Pages                    = {3322-3335},
-   Volume                   = {14},
-   
-   Doi                      = {10.1021/acs.jproteome.5b00354},
-   Url                      = {http://pubs.acs.org/doi/full/10.1021/acs.jproteome.5b00354}
-   }</citation>
+    <citation type="doi">10.1021/acs.jproteome.5b00354</citation>
     <citation type="doi">10.1093/bioinformatics/btu813</citation>
   </citations>
 </tool>
