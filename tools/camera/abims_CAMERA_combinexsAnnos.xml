@@ -1,4 +1,4 @@
-<tool id="abims_CAMERA_combinexsAnnos" name="CAMERA.combinexsAnnos" version="2.2.6+camera@TOOL_VERSION@-galaxy@VERSION_SUFFIX@">
+<tool id="abims_CAMERA_combinexsAnnos" name="CAMERA.combinexsAnnos" version="@W4M_VERSION@+camera@TOOL_VERSION@-galaxy@VERSION_SUFFIX@" profile="21.09">
     <description>Wrapper function for the combinexsAnnos CAMERA function. Returns a dataframe with recalculated annotations.</description>
     <macros>
         <import>macros.xml</import>
@@ -8,7 +8,6 @@
         <include path="CAMERA_combinexsAnnos.r"/>
         <include path="lib.r"/>
     </required_files>
-    <expand macro="stdio"/>
     <command detect_errors="exit_code"><![CDATA[
         @COMMAND_RSCRIPT@CAMERA_combinexsAnnos.r
         image_pos '$image_pos'

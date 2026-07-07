@@ -1,4 +1,4 @@
-<tool id="abims_CAMERA_annotateDiffreport" name="CAMERA.annotate" version="2.2.7+camera@TOOL_VERSION@-galaxy@VERSION_SUFFIX@" profile="21.09">
+<tool id="abims_CAMERA_annotateDiffreport" name="CAMERA.annotate" version="@W4M_VERSION@+camera@TOOL_VERSION@-galaxy@VERSION_SUFFIX@" profile="21.09">
     <description>CAMERA annotate function. Returns annotation results (isotope peaks, adducts and fragments) and a diffreport if more than one condition.</description>
     <macros>
         <import>macros.xml</import>
