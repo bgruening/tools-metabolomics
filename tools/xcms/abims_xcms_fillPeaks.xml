@@ -201,7 +201,7 @@ Parameters
 
 | See the fillChromPeaks_manual_
 
-.. _fillChromPeaks_manual: https://rdrr.io/bioc/xcms/man/fillChromPeaks.html
+.. _fillChromPeaks_manual: https://bioconductor.org/packages//release/bioc/manuals/xcms/man/xcms.pdf#Rfn.fillPeaks.Rdash.methods.1
 
 @HELP_XCMS_MANUAL@
 

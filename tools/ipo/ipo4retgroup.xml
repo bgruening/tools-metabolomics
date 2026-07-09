@@ -190,7 +190,7 @@ Method to use for groupChromPeaks
     | See the PeakDensity_manual_
 
 
-.. _PeakDensity_manual: https://rdrr.io/bioc/xcms/man/groupChromPeaks-density.html#heading-2
+.. _PeakDensity_manual: https://bioconductor.org/packages//release/bioc/vignettes/xcms/inst/doc/LC-MS-feature-grouping.html
 
 
 Method to use for adjustRtime
@@ -206,8 +206,8 @@ Method to use for adjustRtime
     | This method performs retention time adjustment using the Obiwarp method [Prince 2006]. It is based on the code at http://obi-warp.sourceforge.net but supports alignment of multiple samples by aligning each against a _center_ sample. The alignment is performed directly on the ‘profile-matrix’ and can hence be performed independently of the peak detection or peak grouping.
     | See the Obiwarp_manual_
 
-.. _PeakGroups_manual: https://rdrr.io/bioc/xcms/man/adjustRtime-peakGroups.html#heading-2
-.. _Obiwarp_manual: https://rdrr.io/bioc/xcms/man/adjustRtime-obiwarp.html
+.. _PeakGroups_manual: https://bioconductor.org/packages//release/bioc/vignettes/xcms/inst/doc/LC-MS-feature-grouping.html
+.. _Obiwarp_manual: https://bioconductor.org/packages//release/bioc/vignettes/xcms/inst/doc/xcms.html
 
 ---------------------------------------------------
 

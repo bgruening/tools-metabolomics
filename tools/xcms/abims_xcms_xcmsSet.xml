@@ -464,10 +464,10 @@ Extraction method for peaks detection
     | Wavelet based, used for direct infusion data. Continuous wavelet transform (CWT) can be used to locate chromatographic peaks on different scales.
     | See the MSW_manual_
 
-.. _MatchedFilter_manual: https://rdrr.io/bioc/xcms/man/findChromPeaks-matchedFilter.html#heading-2
-.. _CentWave_manual: https://rdrr.io/bioc/xcms/man/findChromPeaks-centWave.html#heading-2
-.. _CentWaveWithPredIsoROIs_manual: https://rdrr.io/bioc/xcms/man/findChromPeaks-centWaveWithPredIsoROIs.html#heading-2
-.. _MSW_manual: https://rdrr.io/bioc/xcms/man/findPeaks-MSW.html#heading-2
+.. _MatchedFilter_manual: https://bioconductor.org/packages//release/bioc/manuals/xcms/man/xcms.pdf#Rfn.findChromPeaks.Rdash.matchedFilter.1
+.. _CentWave_manual: https://bioconductor.org/packages//release/bioc/manuals/xcms/man/xcms.pdf#Rfn.findChromPeaks.Rdash.centWave.1
+.. _CentWaveWithPredIsoROIs_manual: https://bioconductor.org/packages//release/bioc/manuals/xcms/man/xcms.pdf#Rfn.findChromPeaks.Rdash.centWaveWithPredIsoROIs.1
+.. _MSW_manual: https://bioconductor.org/packages//release/bioc/manuals/xcms/man/xcms.pdf#Rfn.findPeaks.Rdash.MSW.1
 
 @HELP_XCMS_MANUAL@
 

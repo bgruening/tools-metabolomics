@@ -227,8 +227,8 @@ Extraction method for findChromPeaks
     | The method is capable of detecting close-by-peaks and also overlapping peaks. Some efforts are made to detect the exact peak boundaries to get precise peak integrals.
     | See the CentWave_manual_
 
-.. _MatchedFilter_manual: https://rdrr.io/bioc/xcms/man/findChromPeaks-matchedFilter.html#heading-2
-.. _CentWave_manual: https://rdrr.io/bioc/xcms/man/findChromPeaks-centWave.html#heading-2
+.. _MatchedFilter_manual: https://bioconductor.org/packages//release/bioc/manuals/xcms/man/xcms.pdf#Rfn.findChromPeaks.Rdash.matchedFilter.1
+.. _CentWave_manual: https://bioconductor.org/packages//release/bioc/manuals/xcms/man/xcms.pdf#Rfn.findChromPeaks.Rdash.centWave.1
 
 ---------------------------------------------------
 

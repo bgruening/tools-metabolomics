@@ -321,9 +321,9 @@ Method to use for grouping
     | This method is inspired by the grouping algorithm of mzMine [Katajamaa 2006] and performs correspondence based on proximity of peaks in the space spanned by retention time and mz values.  The method creates first a master peak list consisting of all chromatographic peaks from the sample in which most peaks were identified, and starting from that, calculates distances to peaks from the sample with the next most number of peaks. If peaks are closer than the defined threshold they are grouped together.
     | See the NearestPeaks_manual_
 
-.. _MzClust_manual: https://rdrr.io/bioc/xcms/man/groupChromPeaks-mzClust.html#heading-2
-.. _PeakDensity_manual: https://rdrr.io/bioc/xcms/man/groupChromPeaks-density.html#heading-2
-.. _NearestPeaks_manual: https://rdrr.io/bioc/xcms/man/groupChromPeaks-nearest.html#heading-2
+.. _MzClust_manual: https://bioconductor.org/packages//release/bioc/manuals/xcms/man/xcms.pdf#Rfn.group.mzClust.1
+.. _PeakDensity_manual: https://bioconductor.org/packages//release/bioc/manuals/xcms/man/xcms.pdf#Rfn.group.density.1
+.. _NearestPeaks_manual: https://bioconductor.org/packages//release/bioc/manuals/xcms/man/xcms.pdf#Rfn.group.nearest.1
 
 @HELP_XCMS_MANUAL@
 
