@@ -3,6 +3,7 @@
     <macros>
         <import>macros.xml</import>
     </macros>
+    <expand macro="xrefs"/>
     <expand macro="requirements"/>
     <required_files>
         <include path="ipo4retgroup.r"/>
@@ -216,6 +217,5 @@ Changelog/News
 @HELP_NEWVERSION_1_10_0_0@
 
     ]]></help>
-    <expand macro="xrefs"/>
     <expand macro="citation"/>
 </tool>
