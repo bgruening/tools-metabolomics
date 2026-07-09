@@ -9,7 +9,9 @@
     influx_data_manager
     --physiofit '$physiofit' 
     --isocor '$isocor'
+#if $mapping:
     --mapping '$mapping'
+#end if
     --linp '$linp'
     --netw '$netw'
     --mmet '$mmet'
