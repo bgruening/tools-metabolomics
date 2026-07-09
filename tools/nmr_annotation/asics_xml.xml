@@ -1,4 +1,4 @@
-<tool id="NmrAnnotation" name="NMR_Annotation" version="3.0.0+galaxy1">
+<tool id="NmrAnnotation" name="NMR_Annotation" version="3.0.0+galaxy2">
     <description> Annotation of complex mixture NMR spectra and metabolite proportion estimation </description>
     <edam_topics>
         <edam_topic>topic_2259</edam_topic>
