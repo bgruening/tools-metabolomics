@@ -4,6 +4,7 @@
         <import>macros.xml</import>
         <import>macros_xcms.xml</import>
     </macros>
+    <expand macro="xrefs"/>
     <expand macro="requirements"/>
     <required_files>
         <include path="xcms_group.r"/>
@@ -418,6 +419,5 @@ Changelog/News
 
 
     ]]></help>
-    <expand macro="xrefs"/>
     <expand macro="citation"/>
 </tool>

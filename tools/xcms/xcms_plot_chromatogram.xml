@@ -4,13 +4,13 @@
         <import>macros.xml</import>
         <import>macros_xcms.xml</import>
     </macros>
+    <expand macro="xrefs"/>
     <expand macro="requirements"/>
     <required_files>
         <include path="xcms_plot_chromatogram.r"/>
         <include path="lib.r"/>
     </required_files>
-    <expand macro="stdio"/>
-    <command><![CDATA[
+    <command detect_errors="exit_code"><![CDATA[
         @COMMAND_RSCRIPT@xcms_plot_chromatogram.r
 
         images 'c("${"\",\"".join(map(str, $images))}")'
@@ -116,6 +116,5 @@ Changelog/News
 - NEW: This new tool will plot base peak intensity chromatogram (BPI) and total ion chromatogram (TIC) from xcms experience. It will replace those created by xcmsSet and retcor tools.
 
     ]]></help>
-    <expand macro="xrefs"/>
     <expand macro="citation"/>
 </tool>

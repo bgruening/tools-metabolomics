@@ -4,13 +4,13 @@
         <import>macros.xml</import>
         <import>macros_xcms.xml</import>
     </macros>
+    <expand macro="xrefs"/>
     <expand macro="requirements"/>
     <required_files>
         <include path="xcms_retcor.r"/>
         <include path="lib.r"/>
     </required_files>
-    <expand macro="stdio"/>
-    <command><![CDATA[
+    <command detect_errors="exit_code"><![CDATA[
         @COMMAND_RSCRIPT@xcms_retcor.r
         image '$image'
 
@@ -370,6 +370,5 @@ Changelog/News
 
 
     ]]></help>
-    <expand macro="xrefs"/>
     <expand macro="citation"/>
 </tool>

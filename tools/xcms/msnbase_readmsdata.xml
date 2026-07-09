@@ -4,6 +4,7 @@
         <import>macros.xml</import>
         <import>macros_msnbase.xml</import>
     </macros>
+    <expand macro="xrefs"/>
     <expand macro="requirements"/>
     <required_files>
         <include path="msnbase_readmsdata.r"/>
@@ -235,6 +236,5 @@ Changelog/News
 - NEW: a new dedicated tool to read the raw data. This function was previously included in xcms.findChromPeaks. This way, you will now be able to display TICs and BPCs before xcms.findChromPeaks.
 
     ]]></help>
-    <expand macro="xrefs"/>
     <expand macro="citation"/>
 </tool>

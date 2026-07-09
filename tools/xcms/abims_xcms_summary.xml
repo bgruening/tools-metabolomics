@@ -4,6 +4,7 @@
         <import>macros.xml</import>
         <import>macros_xcms.xml</import>
     </macros>
+    <expand macro="xrefs"/>
     <requirements>
         <requirement type="package" version="@TOOL_VERSION@">bioconductor-xcms</requirement>
         <requirement type="package" version="1.46.0">bioconductor-camera</requirement>
@@ -13,8 +14,7 @@
         <include path="xcms_summary.r"/>
         <include path="lib.r"/>
     </required_files>
-    <expand macro="stdio"/>
-    <command><![CDATA[
+    <command detect_errors="exit_code"><![CDATA[
         @COMMAND_RSCRIPT@xcms_summary.r
 
         image '$image'
@@ -131,6 +131,5 @@ Changelog/News
 
 
     ]]></help>
-    <expand macro="xrefs"/>
     <expand macro="citation"/>
 </tool>

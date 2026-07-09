@@ -4,13 +4,13 @@
         <import>macros.xml</import>
         <import>macros_xcms.xml</import>
     </macros>
+    <expand macro="xrefs"/>
     <expand macro="requirements"/>
     <required_files>
         <include path="xcms_xcmsSet.r"/>
         <include path="lib.r"/>
     </required_files>
-    <expand macro="stdio"/>
-    <command><![CDATA[
+    <command detect_errors="exit_code"><![CDATA[
         @COMMAND_RSCRIPT@xcms_xcmsSet.r
 
         image '$image'
@@ -585,6 +585,5 @@ Changelog/News
 - IMPROVEMENT: parameter labels have changed to facilitate their reading.
 
     ]]></help>
-    <expand macro="xrefs"/>
     <expand macro="citation"/>
 </tool>

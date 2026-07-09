@@ -4,6 +4,7 @@
         <import>macros.xml</import>
         <import>macros_xcms.xml</import>
     </macros>
+    <expand macro="xrefs"/>
     <expand macro="requirements"/>
     <required_files>
         <include path="xcms_merge.r"/>
@@ -194,6 +195,5 @@ Changelog/News
 - NEW: a new tool to merge individual xcmsSet outputs to be used by xcms.group
 
     ]]></help>
-    <expand macro="xrefs"/>
     <expand macro="citation"/>
 </tool>
