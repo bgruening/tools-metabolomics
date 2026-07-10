@@ -37,7 +37,7 @@
     <outputs>
         <data format='txt' name='stdout' label='Run log'/>
         <collection type='list' label='Influx_si input files' name='list_output'>
-            <discover_datasets pattern='(?P&lt;name&gt;.+\.[^.]+)$' format='zip'/>
+            <discover_datasets pattern='__name_and_ext__' format='zip'/>
         </collection>
         <data format='txt' name='stderr' label='Influx DM error log'/>
     </outputs>
@@ -56,11 +56,11 @@
                 <element name='Sample_1'>
                     <assert_contents>
                         <has_archive_member path='Sample_1.miso'>
-                            <has_text_matching expression='sample\tId\tComment\tSpecie\tFragment\tDataset\tIsospecies\tSD\tTime'/>
+                            <has_text_matching expression='sample&#9;Id&#9;Comment&#9;Specie&#9;Fragment&#9;Dataset&#9;Isospecies&#9;Value&#9;SD&#9;Time'/>
                             <has_n_lines n='30'/>
                         </has_archive_member>
                         <has_archive_member path='Sample_1.mflux'>
-                            <has_text_matching expression='Id\tComment\tFlux\tValue\tSD'/>
+                            <has_text_matching expression='Id&#9;Comment&#9;Flux&#9;Value&#9;SD'/>
                             <has_text_matching expression='Glc_q'/>
                             <has_n_lines n='4'/>
                         </has_archive_member>
