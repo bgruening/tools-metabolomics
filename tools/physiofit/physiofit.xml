@@ -72,7 +72,7 @@
         
         It is one of the routine tools that we use at the
         `MetaSys team <https://www.toulouse-biotechnology-institute.fr/en/poles/equipe-metasys/>`_
-        and `MetaToul platform <https://mth-metatoul.com/>`_ to calculate fluxes.
+        and MetaToul platform to calculate fluxes.
         
         The code is open-source, and available on `GitHub <https://github.com/MetaSys-LISBP/PhysioFit/>`_ under a GPLv3 license.
         
