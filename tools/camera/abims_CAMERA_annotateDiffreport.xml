@@ -3,6 +3,11 @@
     <macros>
         <import>macros.xml</import>
     </macros>
+    <edam_operations>
+        <edam_operation>operation_0226</edam_operation>
+        <!-- Annotation -->
+    </edam_operations>
+    <expand macro="xrefs"/>
     <expand macro="requirements"/>
     <required_files>
         <include path="CAMERA_annotateDiffreport.r"/>
@@ -67,19 +72,19 @@
 
     ]]></command>
     <inputs>
-        <param name="image" type="data" format="rdata.xcms.fillpeaks,rdata" label="RData file" help="Output file from xcms fillPeaks"/>
+        <param name="image" type="data" label="RData file" format="rdata.xcms.fillpeaks,rdata" help="output file from another function xcms (fillPeaks)"/>
         <section name="groupfwhm" title="Group co-eluted peaks based on RT [groupFWHM]" expanded="True">
-            <param argument="sigma" type="integer" value="6" label="Multiplier of the standard deviation"/>
-            <param argument="perfwhm" type="float" value="0.6" max="1" min="0" label="Percentage of FWHM width"/>
+            <param name="sigma" type="integer" value="6" label="Multiplier of the standard deviation" help="[sigma]"/>
+            <param name="perfwhm" type="float" value="0.6" max="1" min="0" label="Percentage of FWHM width" help="[perfwhm]"/>
         </section>
         <section name="findgeneral" title="Annotation general options" expanded="True">
-            <param argument="ppm" type="integer" value="5" label="General ppm error"/>
-            <param argument="mzabs" type="float" value="0.015" label="General absolut error in m/z"/>
+            <param name="ppm" type="integer" value="5" label="General ppm error" help="[ppm]"/>
+            <param name="mzabs" type="float" value="0.015" label="General absolut error in m/z" help="[mzabs]"/>
         </section>
         <section name="findisotopes" title="Annotate Isotopes [findIsotopes]" expanded="True">
-            <param argument="maxcharge" type="integer" value="3" label="Max. ion charge"/>
-            <param argument="maxiso" type="integer" value="4" label="Max. number of expected isotopes" help=""/>
-            <param argument="minfrac" type="float" value="0.5" max="1" min="0" label="The percentage number of samples, which must satisfy the C12/C13 rule for isotope annotation"/>
+            <param name="maxcharge" type="integer" value="3" label="Max. ion charge" help="[maxcharge]"/>
+            <param name="maxiso" type="integer" value="4" label="Max. number of expected isotopes" help="[maxiso]"/>
+            <param name="minfrac" type="float" value="0.5" max="1" min="0" label="The percentage number of samples, which must satisfy the C12/C13 rule for isotope annotation" help="[minfrac]"/>
         </section>
         <conditional name="quick_block">
             <param argument="quick" type="select" label="Mode" help="[quick] If TRUE, use only groupFWHM and findIsotopes functions. Else if FALSE, use also groupCorr and findAdducts">
@@ -88,32 +93,32 @@
             </param>
             <when value="FALSE">
                 <section name="groupcorr" title="Verifying grouping co-eluted peaks [groupCorr]" expanded="True">
-                    <param argument="cor_eic_th" type="float" value="0.75" max="1" min="0" label="groupCorr: correlation threshold (0..1)"/>
-                    <param argument="graphMethod" type="select" label="groupCorr: Method selection for grouping peaks after correlation analysis into pseudospectra">
+                    <param name="cor_eic_th" type="float" value="0.75" max="1" min="0" label="groupCorr: correlation threshold (0..1)" help="[cor_eic_th]"/>
+                    <param name="graphMethod" type="select" label="groupCorr: Method selection for grouping peaks after correlation analysis into pseudospectra" help="[graphMethod]">
                         <option value="hcs" selected="true">hcs</option>
                         <option value="lpc">lpc</option>
                     </param>
-                    <param argument="pval" type="float" value="0.05" max="1" min="0" label="groupCorr: significant correlation threshold"/>
-                    <param argument="calcCiS" type="boolean" checked="true" truevalue="TRUE" falsevalue="FALSE" label="groupCorr: Use correlation inside samples for peak grouping"/>
-                    <param argument="calcIso" type="boolean" checked="false" truevalue="TRUE" falsevalue="FALSE" label="groupCorr: Use isotopic relationship for peak grouping"/>
-                    <param argument="calcCaS" type="boolean" checked="false" truevalue="TRUE" falsevalue="FALSE" label="groupCorr: Use correlation across samples for peak grouping"/>
+                    <param name="pval" type="float" value="0.05" max="1" min="0" label="groupCorr: significant correlation threshold" help="[pval]"/>
+                    <param name="calcCiS" type="boolean" checked="true" truevalue="TRUE" falsevalue="FALSE" label="groupCorr: Use correlation inside samples for peak grouping" help="[calcCiS]"/>
+                    <param name="calcIso" type="boolean" checked="false" truevalue="TRUE" falsevalue="FALSE" label="groupCorr: Use isotopic relationship for peak grouping" help="[calcIso]"/>
+                    <param name="calcCaS" type="boolean" checked="false" truevalue="TRUE" falsevalue="FALSE" label="groupCorr: Use correlation across samples for peak grouping" help="[calcCaS]"/>
                 </section>
                 <section name="findadducts" title="Annotate Adducts [findAdducts]" expanded="True">
-                    <param argument="polarity" type="select" label="Which polarity mode was used for measuring of the ms sample">
+                    <param name="polarity" type="select" label="Which polarity mode was used for measuring of the ms sample" help="polarity">
                         <option value="positive">positive</option>
                         <option value="negative" selected="true">negative</option>
                     </param>
-                    <param argument="max_peaks" type="integer" value="100" label="How much peaks will be calculated in every thread using the parallel mode"/>
+                    <param name="max_peaks" type="integer" value="100" label="How much peaks will be calculated in every thread using the parallel mode" help="[max_peaks]"/>
                     <conditional name="rules_block">
                         <param name="rules_select" type="select" label="Use a personal ruleset file">
                             <option value="TRUE">Yes</option>
                             <option value="FALSE" selected="true">No</option>
                         </param>
                         <when value="FALSE">
-                            <param argument="multiplier" type="integer" value="3" label="If no ruleset is provided, calculate ruleset with max. number n of [nM+x] clusterions"/>
+                            <param name="multiplier" type="integer" value="3" label="If no ruleset is provided, calculate ruleset with max. number n of [nM+x] clusterions" help="[multiplier]"/>
                         </when>
                         <when value="TRUE">
-                            <param argument="rules" type="data" format="csv" label="User defined ruleset"/>
+                            <param name="rules" type="data" format="csv" label="User defined ruleset" help="[rules]"/>
                         </when>
                     </conditional>
                 </section>
@@ -130,17 +135,17 @@
                     <option value="show">Two or more conditions</option>
                 </param>
                 <when value="show">
-                    <param argument="eicmax" type="integer" value="0" label="Number of the most significantly different analytes to create EICs for"/>
-                    <param argument="eicwidth" type="integer" value="200" label="Width (in seconds) of EICs produced"/>
-                    <param argument="value" type="select" label="Intensity values to be used for the diffreport">
+                    <param name="eicmax" type="integer" value="0" label="Number of the most significantly different analytes to create EICs for" help="[eicmax]"/>
+                    <param name="eicwidth" type="integer" value="200" label="Width (in seconds) of EICs produced" help="[eicwidth]"/>
+                    <param name="value" type="select" label="Intensity values to be used for the diffreport" help="[value]">
                         <option value="into" selected="true">into</option>
                         <option value="maxo">maxo</option>
                         <option value="intb">intb</option>
                     </param>
-                    <param argument="h" type="integer" value="480" label="Numeric variable for the height of the eic and boxplots that are printed out"/>
-                    <param argument="w" type="integer" value="640" label="Numeric variable for the width of the eic and boxplots print out made"/>
-                    <param argument="mzdec" type="integer" value="2" label="Number of decimal places of title m/z values in the eic plot"/>
-                    <param argument="sortpval" type="boolean" checked="false" truevalue="TRUE" falsevalue="FALSE" label="logical indicating whether the reports should be sorted by p-value"/>
+                    <param name="h" type="integer" value="480" label="Numeric variable for the height of the eic and boxplots that are printed out" help="[height]"/>
+                    <param name="w" type="integer" value="640" label="Numeric variable for the width of the eic and boxplots print out made" help="[width]"/>
+                    <param name="mzdec" type="integer" value="2" label="Number of decimal places of title m/z values in the eic plot" help="[mzdec]"/>
+                    <param name="sortpval" type="boolean" checked="false" truevalue="TRUE" falsevalue="FALSE" label="logical indicating whether the reports should be sorted by p-value" help="[sortpval]"/>
                     <param name="tabular2" type="select" label="Export the Diffreport files in ">
                         <option value="zip" selected="true">Zip</option>
                         <option value="datasetcollection">Individual file in a Dataset Collection</option>
@@ -170,13 +175,13 @@
             <filter>quick_block['quick'] == 'TRUE'</filter>
         </data>
         <data name="output_diffreport_eic_zip" format="zip" label="${image.name[:-6]}.annotateDiffreport_eic.zip" from_work_dir="eic.zip">
-            <filter>diffreport['options']['option'] == 'show' and diffreport['options']['eicmax'] &gt; 0 and diffreport['options']['png2'] == 'zip'</filter>
+            <filter>diffreport['options']['option'] == 'show' and diffreport['options']['eicmax'] > 0 and diffreport['options']['png2'] == 'zip'</filter>
         </data>
         <data name="output_diffreport_box_zip" format="zip" label="${image.name[:-6]}.annotateDiffreport_box.zip" from_work_dir="box.zip">
-            <filter>diffreport['options']['option'] == 'show' and diffreport['options']['eicmax'] &gt; 0 and diffreport['options']['png2'] == 'zip'</filter>
+            <filter>diffreport['options']['option'] == 'show' and diffreport['options']['eicmax'] > 0 and diffreport['options']['png2'] == 'zip'</filter>
         </data>
         <collection name="output_diffreport_picture_pdf" type="list" label="${image.name[:-6]}.annotateDiffreport.pdf">
-            <filter>diffreport['options']['option'] == 'show' and diffreport['options']['eicmax'] &gt; 0 and diffreport['options']['png2'] == 'pdf'</filter>
+            <filter>diffreport['options']['option'] == 'show' and diffreport['options']['eicmax'] > 0 and diffreport['options']['png2'] == 'pdf'</filter>
             <discover_datasets pattern="__designation_and_ext__" directory="pdf" format="pdf"/>
         </collection>
         <data name="output_diffreport_table_zip" format="zip" label="${image.name[:-6]}.annotateDiffreport_table.zip" from_work_dir="tabular.zip">
