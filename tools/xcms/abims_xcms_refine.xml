@@ -12,9 +12,8 @@
         <include path="xcms_refine.r" />
         <include path="lib.r" />
     </required_files>
-    <expand macro="stdio"/>
 
-    <command><![CDATA[
+    <command detect_errors="exit_code"><![CDATA[
         @COMMAND_RSCRIPT@xcms_refine.r
         image '$image'
 

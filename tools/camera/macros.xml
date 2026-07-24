@@ -113,9 +113,6 @@
         </section>
         <conditional name="quick_block">
             <param name="quick" value="FALSE"/>
-            <section name="findadducts">
-                <param name="max_peaks" value="100"/>
-            </section>
         </conditional>
         <section name="diffreport">
             <conditional name="options">
@@ -189,22 +186,12 @@
             <citation type="doi">10.1093/bioinformatics/btu813</citation>
         </citations>
     </xml>
-    <xml name="edam_topics">
-        <edam_topics>
-            <edam_topic>topic_2259</edam_topic>
-            <!-- Systems biology -->
-            <edam_topic>topic_3172</edam_topic>
-            <!-- Metabolomics -->
-            <edam_topic>topic_3307</edam_topic>
-            <!-- Computational biology -->
-        </edam_topics>
-    </xml>
     <xml name="edam_operations">
         <edam_operations>
             <edam_operation>operation_0226</edam_operation>
             <!-- Annotation -->
-            <edam_operation>operation_3501</edam_operation>
-            <!-- Enrichment analysis -->
+            <edam_operation>operation_3214</edam_operation>
+            <!-- Spectral analysis -->
         </edam_operations>
     </xml>
     <xml name="xrefs">

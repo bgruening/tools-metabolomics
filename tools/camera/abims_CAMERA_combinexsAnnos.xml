@@ -3,6 +3,12 @@
     <macros>
         <import>macros.xml</import>
     </macros>
+    <edam_operations>
+        <edam_operation>operation_0226</edam_operation>
+        <!-- Annotation -->
+        <edam_operation>operation_3436</edam_operation>
+        <!-- Aggregation -->
+    </edam_operations>
     <expand macro="xrefs"/>
     <expand macro="requirements"/>
     <required_files>

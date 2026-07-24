@@ -70,7 +70,7 @@
                         <option value="1">peak limits based on smoothed 2nd derivative (less precise)</option>
                         <option value="2">peak limits based on real data (more sensitive to noise)</option>
                     </param>
-                    <param argument="prefilter" type="text" value="3,100" label="Prefilter step for the first phase" help="Separate by coma k,I. Mass traces are only retained if they contain at least ‘k’ peaks with intensity &gt;= ‘I’"/>
+                    <param argument="prefilter" type="text" value="3,100" label="Prefilter step for the first phase" help="Separate by coma k,I. Mass traces are only retained if they contain at least ‘k’ peaks with intensity >= ‘I’"/>
                     <param argument="noise" type="integer" value="0" label="Noise filter" help="optional argument which is useful for data that was centroided without any intensity threshold, centroids with intensity smaller than ‘noise’ are omitted from ROI detection"/>
                 </section>
             </when>
